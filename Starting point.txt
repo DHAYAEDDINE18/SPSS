@@ -1,0 +1,46 @@
+Start
+  |
+  |--► What is your research goal?
+        |
+        ├──► A. Compare groups (differences)
+        |       |
+        |       ├──► How many groups?
+        |       |       |
+        |       |       ├──► Two groups
+        |       |       |       |
+        |       |       |       ├──► Independent groups?
+        |       |       |       |       |
+        |       |       |       |       ├──► Yes
+        |       |       |       |       |       |
+        |       |       |       |       |       ├──► Normal? → "Independent Samples t-test"
+        |       |       |       |       |       └──► Not Normal? → "Mann–Whitney U test"
+        |       |       |       |
+        |       |       |       └──► Same group (pre/post)?
+        |       |       |               |
+        |       |       |               ├──► Normal? → "Paired Samples t-test"
+        |       |       |               └──► Not Normal? → "Wilcoxon Signed-Rank test"
+        |       |
+        |       └──► More than 2 groups
+        |               |
+        |               ├──► Normal? → "One-Way ANOVA"
+        |               └──► Not Normal? → "Kruskal–Wallis test"
+        |
+        ├──► B. Check association/relationship
+        |       |
+        |       ├──► 2 continuous variables?
+        |       |       |
+        |       |       ├──► Normal? → "Pearson correlation"
+        |       |       └──► Not Normal? → "Spearman's correlation"
+        |       |
+        |       └──► 2 categorical variables? → "Chi-square test"
+        |
+        ├──► C. Predict an outcome
+        |       |
+        |       ├──► 1 outcome, 1+ predictors, continuous? → "Linear Regression"
+        |       └──► Categorical outcome? → "Logistic Regression"
+        |
+        └──► D. Describe data (summarise)
+                |
+                ├──► Central tendency? → Mean, Median, Mode
+                ├──► Spread? → Std Deviation, Range, IQR
+                └──► Frequency? → Frequencies table

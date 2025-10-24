@@ -1,0 +1,167 @@
+
+
+## 🧩 Understanding SPSS Variable View Parameters
+
+When you open Variable View in SPSS, each row represents a variable, and each column is a property (parameter) of that variable.
+
+Here’s a complete explanation 👇
+
+---
+
+### 1️⃣ Name
+
+* What it is: The short identifier SPSS uses for the variable.
+* Rules:
+
+  * Must start with a letter.
+  * No spaces (use `_` instead).
+  * Max 64 characters.
+* Example:
+  `Q1_Gender`, `Age`, `Years_of_Experience`
+
+✅ Tip: Choose short, clear, consistent names — e.g., `Q1_Gender`, `Q2_Experience`.
+
+---
+
+### 2️⃣ Type
+
+* What it is: Defines the kind of data the variable holds.
+* Common Types:
+
+  | Type            | Description                | Example                     |
+  | --------------- | -------------------------- | --------------------------- |
+  | Numeric         | Numbers only (most common) | 1, 2, 3 or 15.5             |
+  | String          | Text values                | “Male”, “Female”, “Teacher” |
+  | Date            | Date/time values           | 21/10/2025                  |
+  | Dollar / Custom | Displayed as currency      | $1500                       |
+
+✅ Tip:
+→ Use Numeric for coded data (e.g., 1 = Male, 2 = Female).
+→ Use String only if you don’t plan to analyse it numerically (e.g., names).
+
+---
+
+### 3️⃣ Width
+
+* What it is: The maximum number of characters or digits allowed in a variable.
+* Example:
+
+  * Width 8 → allows up to 8 digits or letters.
+  * If you enter “123456789”, it will be cut to “12345678”.
+
+✅ Usually leave default (8) for numeric, increase for long strings.
+
+---
+
+### 4️⃣ Decimals
+
+* What it is: How many decimal places to display for numeric data.
+* Example:
+
+  * `2.00` if Decimals = 2
+  * `2` if Decimals = 0
+
+✅ For whole-number codes (like gender, Likert scales), set Decimals = 0.
+
+---
+
+### 5️⃣ Label
+
+* What it is: A long, descriptive name for your variable (can include spaces).
+* Example:
+
+  * Name: `Q1_Gender`
+  * Label: “Participant’s Gender”
+
+✅ Tip: The label appears in SPSS output tables — use it for clarity.
+
+---
+
+### 6️⃣ Values
+
+* What it is: Defines what each numeric code means.
+* Example:
+
+  * 1 = Male
+  * 2 = Female
+
+✅ Use this for categorical or ordinal variables to make your output readable.
+→ You can define multiple values (1=Low, 2=Medium, 3=High, etc.)
+
+---
+
+### 7️⃣ Missing
+
+* What it is: Specifies which values should be treated as missing data.
+* Example:
+
+  * If you code “99” or “0” for missing answers → set them here so SPSS ignores them.
+
+✅ Useful to keep incomplete responses from affecting your analysis.
+
+---
+
+### 8️⃣ Columns
+
+* What it is: The display width of the variable column in *Data View*.
+* Example:
+
+  * Set to 8 or 10 to see full text; otherwise, it may appear truncated.
+
+✅ Doesn’t affect analysis — only visual appearance.
+
+---
+
+### 9️⃣ Align
+
+* What it is: Controls text alignment in Data View (Left, Centre, Right).
+  ✅ Only affects appearance — not the analysis.
+
+---
+
+### 🔟 Measure
+
+* What it is: The level of measurement (explained earlier):
+
+  * Nominal → categories (e.g., Gender)
+  * Ordinal → ranked (e.g., Satisfaction level)
+  * Scale → numeric/continuous (e.g., Age, Test score)
+
+✅ Important: SPSS uses this to determine which statistics and graphs to allow.
+
+---
+
+### 11️⃣ Role
+
+* What it is: Defines how the variable is *used in analysis* (mainly in advanced modelling or automatic tools).
+* Options:
+
+  | Role      | Meaning                                       | Example             |
+  | --------- | --------------------------------------------- | ------------------- |
+  | Input     | Predictor / Independent variable              | Years of Experience |
+  | Target    | Dependent variable (what you predict)         | Satisfaction Score  |
+  | Both      | Used as both                                  | Interaction Term    |
+  | None      | Excluded from modelling                       | ID number           |
+  | Partition | Used to split data (e.g., training/test sets) | Sample group        |
+  | Split     | Used to separate cases                        | Gender              |
+
+✅ For basic SPSS use, you can keep it set to “Input” or “None.”
+
+---
+
+## 🧠 Example Summary Table
+
+| Parameter | Description        | Typical Setting for Coded Survey Data |
+| --------- | ------------------ | ------------------------------------- |
+| Name      | Short variable ID  | Q1_Gender                             |
+| Type      | Numeric or String  | Numeric                               |
+| Width     | Max characters     | 8                                     |
+| Decimals  | Decimal places     | 0                                     |
+| Label     | Descriptive name   | Participant’s gender                  |
+| Values    | Code meanings      | 1 = Male, 2 = Female                  |
+| Missing   | Missing value code | 99                                    |
+| Columns   | Display width      | 8                                     |
+| Align     | Text alignment     | Center                                |
+| Measure   | Data scale         | Nominal                               |
+| Role      | Analysis purpose   | Input                                 |
+
